@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Googleフォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- meta -->
+  <meta charset="UTF-8">
+  <title>PORTFOLIO</title>
+  <meta name="description"
+  content="未経験から職業訓練校で勉強し、Webエンジニアを目指すポートフォリオサイト">
+</head>
+<body>
+  <div id="wrapper">
+    <header class="flex headCover">
+      <a href="index.html">PORTFOLIO</a>
+      <span id="menu" class="material-symbols-outlined">
+        menu
+      </span>
+      <nav>
+        <ul class="flex">
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="cover flex">
+        <h1>Portfolio<br>Takeju Miki</h1>
+      </div>
+      <article>
+        <h2 id="works">Works</h2>
+        <div id="work-wrap" class="flex">
+          <div class="work">
+            <a href="http://vivi64.starfree.jp/" target="_blank"><img src="images/work3.webp" alt="レシピの森" loading="lazy"></a>
+            <p>【グループ制作】架空のレシピ投稿サイト(今後個人で改修予定)</p>
+            <p class="conpile">詳細<span class="material-icons">expand_more</span></p>
+            <div class="description">
+              <p>6人でグループを組み約18時間での「PHP/MySQLを用いて新規登録・ログイン機能を実装したWebアプリ開発実習」で作成した架空のレシピ投稿サイトです。<br>
+              <span>工夫した点</span> : ディレクターを担当しタスクを効率的に割り振ることで、決められた時間で必要な機能を実装できました。<br>
+              <span>苦労した点</span> : 自分の指示で結果的に二度手間になってしまった作業があるなど、改善の余地が多くありました。</p>
+            </div>
+          </div>
+          <div class="work">
+            <a href="works/2cards/index.html" target="_blank"><img src="images/work1.webp" alt="2CARDS" loading="lazy"></a>
+            <p>2CARDS</p>
+            <p class="conpile">詳細<span class="material-icons">expand_more</span></p>
+            <div class="description">
+              <p>JavaScriptを使ってカードに書かれた数字の大小を予想するゲームを作りました。<br>
+              <span>工夫した点</span> : 現在の成功回数と、ハイスコアを表示できるようにしました。<br>
+              <span>苦労した点</span> : 1ゲーム毎にリセットすることが上手くできず正常に動作するまで試行錯誤しました。</p>
+            </div>
+          </div>
+          <div class="work">
+            <a href="#"><img src="images/work2.webp" alt="ポートフォリオサイト" loading="lazy"></a>
+            <p>ポートフォリオサイト</p>
+            <p class="conpile">詳細<span class="material-icons">expand_more</span></p>
+            <div class="description">
+              <p>HTML/CSS/JavaScriptを活用してポートフォリオサイトを作りました。<br>
+              <span>工夫した点</span> : JSを使ってハンバーガーメニューやTOPへ戻るボタンを実装しました。<br>
+              <span>苦労した点</span> : レスポンシブ対応を実装する際、表示崩れが何か所かあり対応に時間がかかりました。</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <section>
+        <h2 id="about">About</h2>
+        <div>
+          <p>プロフィール</p>
+          <ul class="flex">
+            <li>
+              <img src="images\myprofile.webp" alt="プロフィール" loading="lazy">
+            </li>
+            <li>
+              <p>三木 健寿 Miki Takeju</p>
+              <p>2000年3月生まれ 兵庫県出身<br>
+              <a href="https://hit-school.jp/training/0064/" target="_blank">HITスクール「Webデザインも学べるWebプログラマー養成科(短時間)」</a>を受講し、ITエンジニアを目指して日々努力しています。</p>
+            </li>
+          </ul>
+          </div>
+        <div class="flex line">
+          <p>スキル</p>
+        </div>
+        <ul class="flex">
+          <li>Adobe Illustrator</li>
+          <li>Adobe Photoshop</li>
+          <li>Figma</li>
+        </ul>
+        <ul class="flex">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+        </ul>
+        <ul class="flex">
+          <li>PHP</li>
+          <li>MySQL</li>
+        </ul>
+        <div class="flex line">
+          <p>今後訓練で習得予定のスキル</p>
+        </div>
+        <ul class="flex">
+          <li>WordPress</li>
+          <li>AWS</li>
+        </ul>
+      </section>
+      <section>
+        <h2 id="contact">Contact</h2>
+        <div>
+          <p>e-mail</p>
+          <p>hit0064.miki.vivi@gmail.com</p>
+        </div>
+      </section>
+       <a href="#top"><span class="material-symbols-outlined">arrow_upward</span></a>
+    </main>
+    <footer class="flex">
+      <a>PORTFOLIO</a>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

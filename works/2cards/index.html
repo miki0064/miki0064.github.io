@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>2CARDS</title>
+</head>
+<body>
+  <div id="wrapper" class="flex" >
+    <section>
+      <h1>2CARDS</h1>
+      <p>～ルール～</p>
+      <p>伏せられているカードが場のカードより大きいか小さいかを当てる</p>
+      <p>同じ大きさの場合はドロー もう１度ゲームを行う</p>
+      <p>※Aが最も小さく、Kが最も大きい</p>
+    </section>
+    <div id="gametable" class="flex">
+      <div class="flex"></div>
+      <p>結果は...</p>
+    </div>
+    <div id="btn-wrap" class="flex">
+      <button id="High">High</button>
+      <button id="Low">Low</button>
+    </div>
+    <div>
+      <p>現在の連続成功回数：<span id="nowScore">---</span>回</p>
+      <p>最高連続成功回数：<span id="highScore">---</span>回</p>
+    </div>
+    <a href="../../index.html">PORTFOLIOへ戻る</a>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

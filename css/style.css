@@ -1,0 +1,330 @@
+@charset "UTF-8";
+
+  html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    line-height: 1.7;
+    font-size: 20px;
+  }
+
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header,
+  footer {
+    background: #e9ffe4;
+    height: 10vh;
+    font-size: 32px;
+    padding: 0 10%;
+  }
+
+  main {
+    background: #fff;
+  }
+
+  
+
+  /* ヘッダー *************************************************** */
+  header {
+    margin: 0 auto;
+  }
+  .headCover {
+    justify-content: space-between;
+  }
+
+  nav ul {
+    justify-content: space-evenly;
+    gap: 0 2rem;
+  }
+
+  header #menu {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+    user-select: none;
+  }
+  /* メイン *************************************************** */
+  main div:first-child {
+    align-items: center;
+    justify-content: center;
+  }
+
+  section,
+  article {
+    width: 80%;
+    margin: 5vh auto;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 64px;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-style: bold;
+    backdrop-filter: blur(2px);
+    width: 100%;
+  }
+  
+  .cover {
+    background-size: cover;
+    background-position: center bottom;
+    height: 680px;
+    background-image: url(../images/himejiCastle.webp);
+  }
+  
+  h2 {
+    font-size: 40px;
+    text-align: center;
+    border-bottom: 1.5px solid #000;
+  }
+
+  #work-wrap {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .work {
+    width: fit-content;
+    max-width: 416px;
+    margin: 3vh auto;
+    border: #000 2px solid;
+    border-radius: 5px;
+    padding: 1em;
+  }
+
+  .work img {
+    border-radius: 5px;
+  }
+  
+  .work > p:first-of-type {
+    text-align: center;
+    font-size: 24px;
+  }
+  .work p:nth-of-type(2) {
+    cursor: pointer;
+    user-select: none;
+    width: fit-content;
+  }
+
+  .description span {
+    font-weight: 900;
+  }
+
+  .material-icons {
+    font-size: 30px;
+    transform: translateY( 25% );
+    transition: all .5s ease-out;
+    cursor: pointer;
+    user-select: none;
+  }
+/* アコーディオンが開いているとき */
+  .material-icons.open {
+    transform: translateY(25%) rotate(180deg);
+  }
+
+  .description {
+    overflow: hidden;
+    height: 0;
+    transition: all .5s ease-out;
+  }
+
+/* アコーディオンが開いているとき */
+  .description.active {
+    height: auto;
+  }
+
+  section ul {
+    width: 80%;
+    margin: 3vh auto;
+    gap: 0 5vw;
+  }
+
+  section ul a {
+    border-bottom: .8px solid #000;
+  }
+
+  section ul li:last-child p:first-child {
+    font-size: 28px;
+  }
+
+  section div {
+    margin: 5vh auto;
+  }
+
+  /* 小見出し横の線 **************************************/
+  .line {
+    width: 50%;
+  }
+  .line::before,
+  .line::after {
+    content: "";
+    height:1px;
+    flex-grow: 1;
+    background-color:#000;
+  }
+  .line:before {
+    margin-right: 10px;
+    }
+    .line:after {
+    margin-left: 10px;
+    }
+    /* ************************************* */
+
+
+  main section:last-of-type div {
+    padding: 5vh 0;
+    margin: 0 auto;
+  }
+  main section:last-of-type p {
+    text-align: center;
+    margin: .5em auto;
+  }
+  main section:last-of-type p:last-child {
+    border: 1px solid #000;
+    width: fit-content;
+    padding: 0 1em;
+  }
+
+  /* TOPボタン ***************************** */
+  a[ href*="#top" ] {
+    position: fixed;
+    bottom: 2.5em;
+    right: 5em;
+    z-index: 999;
+    display: grid;
+    place-items: center;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #fff;
+    background: #000;
+    transform: translateY( calc( 100% + 2.5em ) );
+    transition: transform .5s ease-in-out;
+  }
+  
+  /* TOPボタンを表示 */
+  a[ href*="#top"].active {
+    transform: translateY(0);
+  }
+
+  /* レスポンシブ************************************************************** */
+  /* タブレット(960px以下)************************************************************** */
+  @media screen and (max-width: 960px){
+    /* body {
+      min-width: none;
+    } */
+    .flex {
+      flex-direction: column;
+    }
+
+    .headCover,
+    .line {
+      flex-direction: row;
+    }
+
+    .headCover {
+      padding: 0 5%;
+    }
+
+    nav {
+      /* ヘッダー元位置から強制的に移動させる */
+      position: fixed;
+      /* 初期位置を画面外に設定 */
+      top: -100vh;
+      left: 0;
+      /* positionプロパティで失った幅の再設定 */
+      width: 100%;
+      /* 希望の高さに設定 */
+      height: 100vh;
+      /* 今後追加したコンテンツに影響されないように重なり順を指定 */
+      z-index: 99;
+      /* アニメーションを追加する */
+      transition: top .5s ease-out;
+    }
+  
+    /* navにactiveというclassがついている時 */
+    nav.active {
+      /* 初期位置(画面外)から画面内に配置位置を変更する */
+      top: 0;
+    }
+    
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #fffc;
+      /* 背景をぼかして視認性を向上させる */
+      /* Safariの旧バージョンでも動作するように */
+      -webkit-backdrop-filter: blur( 5px );
+      backdrop-filter: blur( 5px );
+      /* 要素内容の高さから親要素の高さ(親が数値で高さを指定しているとき)に合わせる */
+      height: 100%;
+      gap: 1em 0;
+  }
+
+    header #menu {
+      display: block;
+      width: fit-content;
+      font-size: 1.5em;
+    }
+
+    section ul p {
+      text-align: center;
+    }
+
+    .line {
+      width: 90%;
+    }
+
+  }
+  /* レスポンシブ************************************************************** */
+  /* モバイル(420px以下)************************************************************** */
+  @media screen and (max-width: 420px){
+    html {
+      min-width: 310px;
+
+    }
+
+    body {
+      font-size: 16px;
+    }
+    header,
+    footer {
+      font-size: 25px;
+    }
+
+    header {
+      width: 100%;
+    }
+
+    .cover {
+      height: 60vh;
+    }
+
+    h1 {
+      font-size: 50px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+  }
